@@ -20,7 +20,7 @@ ID = st.number_input("Enter Employee ID: ")
 
 if st.button("Search"):
     if ID in employ:
-        print("\nEmployee Found!")
-        print("ID: ",ID)
-        print("Name: ",employ[ID]["name"])
-        print("Designation: ",employ[ID]["designation"])
+        st.write("\nEmployee Found!")
+        st.write("ID: ",ID)
+        st.write("Name: ",employ[ID]["name"])
+        st.write("Designation: ",employ[ID]["designation"])

@@ -16,11 +16,20 @@ employ = {
 }
 
 st.title("Employee Search System")
-ID = st.number_input("Enter Employee ID: ")
+
+emp_id = st.text_input("Enter Employee ID:")
 
 if st.button("Search"):
-    if ID in employ:
-        st.write("\nEmployee Found!")
-        st.write("ID: ",ID)
-        st.write("Name: ",employ[ID]["name"])
-        st.write("Designation: ",employ[ID]["designation"])
+
+    if emp_id in employ:
+
+        st.success("Employee Found!")
+
+        st.write("### Employee Details")
+        st.write("**ID:**", emp_id)
+        st.write("**Name:**", employ[emp_id]["name"])
+        st.write("**Designation:**", employ[emp_id]["designation"])
+
+    else:
+
+        st.error("Employee Not Found!")
